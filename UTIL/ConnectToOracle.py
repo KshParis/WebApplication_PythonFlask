@@ -1,6 +1,19 @@
 #Reusable library to connect to any Oracle database
 #Usage: Modify the DB Host and SSID in the body.
 #Author: KshParis  (GitHub)
+
+#usage:From your main/other script, call as follows:
+''' #Import module
+    import ConnectOracle
+
+    #call execute method to pharse and execute any SQL
+    sql_cust_coll = ConnectOracle.cur.execute("select * from dual")
+
+    #returns data as a list along (without column headers)
+    data = sql_cust_coll.fetchall()
+
+    print(data) '''
+
 import cx_Oracle
 
 try:
